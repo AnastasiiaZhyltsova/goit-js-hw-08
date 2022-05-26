@@ -37,4 +37,4 @@ function onImgClick(event) {
 }
 // Change code below this line
 
-console.log(galleryItems);
+// console.log(galleryItems);
