@@ -14,8 +14,11 @@ const onPlay = function ({ seconds }) {
     localStorage.setItem(KEY, seconds);
 };
 // console.log(onPlay);
-player.on('timeupdate', throttle (onPlay, 1000)); 
-
+player.on('timeupdate', throttle(onPlay, 1000)); 
+const time = localStorage.getItem(KEY);
+if (time) {
+    player.setCurrentTime(time);
+}
 // возвращает из хранилища значение с ключом KEY
-player.setCurrentTime(localStorage.getItem(KEY));
+
   
