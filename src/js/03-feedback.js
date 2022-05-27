@@ -33,8 +33,8 @@ function onPlaceTextForm() {
     const savedTextForm = JSON.parse(localStorage.getItem(KEY));
     
     if (savedTextForm) {
-        refs.form.elements.email.value = savedTextForm.email;
-        refs.form.elements.message.value = savedTextForm.message;
+        refs.form.elements.email.value = savedTextForm.email || "";
+        refs.form.elements.message.value = savedTextForm.message || "";
     }
 
 };
