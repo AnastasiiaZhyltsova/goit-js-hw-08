@@ -6,7 +6,7 @@ const refs = {
 }
 
 const KEY = 'feedback-form-state';
-const formData = {};
+const formData = JSON.parse(localStorage.getItem(KEY)) || {};
 
 
 refs.form.addEventListener('input', throttle(onFormText, 500));
